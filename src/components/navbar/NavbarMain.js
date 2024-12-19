@@ -8,7 +8,7 @@ function NavbarMain() {
     <div className='nav-container'>
       <div className='top-nav'>
         <ul>
-          <li>Personal |</li>
+          <li style={{color:'orange'}}>Personal |</li>
           <li>NRI |</li>
           <li>SME |</li>
           <li>Wholesale |</li>
@@ -30,8 +30,8 @@ function NavbarMain() {
           <li>
             <Link to="/">Invest</Link> <FaAngleDown />
           </li>
-          <li>
-          <Link to="/loan">Loan</Link> <FaAngleDown /> 
+          <li style={{color:'orange'}}>
+          <Link to="/loan" style={{color:'orange'}}>Loan</Link> <FaAngleDown /> 
           </li>
           <li>
             <Link to="/">Insure</Link> <FaAngleDown />
