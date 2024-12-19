@@ -1,0 +1,93 @@
+.personal-container{
+    background-color: rgba(0, 51, 102, 1);
+    display: flex;
+    align-items: center;
+    padding-top: 50px;
+
+}
+.container-div{
+    display: flex;
+    flex-direction: column;
+    width: 50%;
+}
+.container-div p{
+    font-size: 25px;
+    color: white;
+    padding-left: 70px;
+    padding-top: 0px;
+    margin-top: 0px !important;
+}
+.container-div p::before{
+content: url('../../images/Line.png');
+padding-right: 10px;
+}
+.container-div p::after{
+    content: url('../../images/Line.png');
+    padding-left: 10px;
+    }
+    
+
+.list-div ul {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    list-style-type: none;
+    /* padding: 10px; */
+    margin-left: 2%;
+    
+}
+
+.list-div ul li {
+    display: flex;
+    align-items: center;
+    gap: 5px;
+    color:white
+
+}
+.list-div ul li::before{
+    content: url('../../images/Check.png');
+}
+.form-div{
+    display: flex;
+    width: 50%;
+    /* padding:40px */
+
+}
+form{
+    /* padding:40px  */
+    background-color: white;
+    border-radius: 10px;
+}
+
+.form-div form{
+    /* background-color: white; */
+    margin: auto;
+    border-radius: 10px;
+}
+form h3{
+    margin: 0px;
+    color:rgba(85, 85, 85, 1);
+    padding: 10px;
+   background-color: rgba(248, 248, 248, 0.83);
+    border-radius: 10px 10px 0px 0px;
+}
+.form-main{
+
+    padding:30px;
+}
+.radio-container {
+    padding: 10px;
+    color: grey;
+}
+.startBtn{
+    background-color: rgba(0, 51, 102, 1);
+    padding: 5px;
+    margin: 10PX;
+    border-radius: 7px;
+    border-color: transparent;
+    color: white;
+}
+
+/* @media only screen and (max-width: 425.5px) {
+
+} */
