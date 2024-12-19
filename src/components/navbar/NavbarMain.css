@@ -37,23 +37,24 @@
 }
 
 .bottom-nav ul li {
-    display: flex;
     align-items: center;
+    display: flex;
     gap: 5px;
-   
+    color: grey;
 }
-.bottom-nav ul li a{
+
+.bottom-nav ul li a {
     text-decoration: none;
     color: rgba(85, 85, 85, 1);
 
 }
-.bottom-nav ul li a:active{
+
+.bottom-nav ul li a:active {
     color: rgba(255, 119, 0, 1);
 }
 
 .url-container {
     background-color: white
-
 }
 
 .url-container ul {
