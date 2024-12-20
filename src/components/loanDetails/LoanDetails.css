@@ -1,0 +1,8 @@
+.loan-container{
+    background-color: rgba(0, 51, 102, 1);
+}
+.loan-container p{
+    text-align: center;
+    color: white;
+    font-size: 44px;
+}

@@ -88,6 +88,14 @@ form h3{
     color: white;
 }
 
-/* @media only screen and (max-width: 425.5px) {
-
-} */
+@media only screen and (max-width:768px) {
+    .personal-container{
+        flex-direction: column;
+    }
+    .form-div{
+        width: 100%;
+    }
+    .container-div{
+        width: 100%;
+    }
+}
