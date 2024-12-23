@@ -1,8 +1,172 @@
-.loan-container{
+.personalProcess-container {
     background-color: rgba(0, 51, 102, 1);
+    display: flex;
+    align-items: center;
+    /* padding-top: 50px; */
+
 }
-.loan-container p{
-    text-align: center;
+
+.personalProcessContainer-div {
+    display: flex;
+    flex-direction: column;
+    width: 50%;
+    padding-bottom: 170px;
+
+}
+
+.personalProcessContainer-div h1,
+h4,
+h5 {
+    font-size: 25px;
     color: white;
-    font-size: 44px;
+    padding-left: 70px;
+    padding-top: 0px;
+    margin-top: 0px !important;
+}
+
+
+/* .personalProcessContainer-div p::before{
+content: url('../../images/Line.png');
+padding-right: 10px;
+} */
+.personalProcessContainer-div h5::after {
+    content: url('../../images/Vector\ 3.png');
+    padding-left: 10px;
+}
+
+
+.personalList-div ul {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    list-style-type: none;
+    /* padding: 10px; */
+    margin-left: 2%;
+
+}
+
+.personalList-div ul li {
+    display: flex;
+    align-items: center;
+    gap: 5px;
+    color: white
+}
+
+.personalList-div ul li::before {
+    content: url('../../images/Check.png');
+}
+
+.personalForm-div {
+    display: flex;
+    width: 50%;
+    padding: 40px
+}
+
+.personalForm-div form {
+    /* padding:40px  */
+    background-color: white;
+    border-radius: 10px;
+}
+
+.personalForm-div form {
+    /* background-color: white; */
+    margin: auto;
+    border-radius: 10px;
+}
+
+.personalForm-div form h3 {
+    margin: 0px;
+    color: rgba(85, 85, 85, 1);
+    padding: 10px 0 10px 42px;
+    background-color: rgba(248, 248, 248, 0.83);
+    border-radius: 10px 10px 0px 0px;
+}
+
+.persolnalForm-main {
+
+    padding: 30px;
+}
+
+.ProceedBtn {
+    background-color: rgba(0, 51, 102, 1);
+    padding: 5px;
+    margin: 10PX;
+    border-radius: 7px;
+    border-color: transparent;
+    color: white;
+}
+.ProceedBtn:hover{
+    background-color:grey;
+    padding: 5px;
+    margin: 10PX;
+    border-radius: 7px;
+    border-color: transparent;
+    color: white;
+}
+
+.form-details {
+    margin: 30px 30px
+}
+
+.form-details label {
+    display: block;
+    padding-left: 10px
+}
+
+.form-details input {
+    width: 90%;
+    padding: 10px;
+    border: 1px solid grey;
+    border-radius: 8px;
+    margin: 10px;
+}
+
+.checkbox-container {
+    display: flex;
+    flex-wrap: nowrap;
+    /* flex-direction: row; */
+    align-items: flex-start;
+}
+
+.checkbox-container input {
+    width: 20px;
+}
+.checkbox-container label {
+    color:grey;
+    width: 100%;
+    display: block;
+}
+
+.note {
+    font-size: 16px;
+    color: black;
+    font-weight: 600;
+    padding-left: 10px;
+}
+
+.error {
+    color: red;
+    font-size: 12px;
+}
+
+
+
+@media only screen and (max-width:768px) {
+    .personalProcess-container {
+        flex-direction: column;
+    }
+
+    .personalForm-div {
+        width: 100%;
+    }
+
+    .personalProcessContainer-div {
+        width: 100%;
+    }
+}
+
+@media only screen and (max-width: 768px) {
+    .personalForm-div {
+        width: 70%;
+    }
 }

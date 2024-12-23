@@ -4,31 +4,34 @@ import { useNavigate } from 'react-router-dom';
 
 function PersonalLoanProcess() {
     const navigate = useNavigate();
+
     const [formData, setFormData] = useState({
         mobile: "",
         dob: "",
         pan: "",
         termsAccepted: false,
+        otp:Math.floor(100000 + Math.random() * 900000)
     });
 
     const [errors, setErrors] = useState({});
+    const [isOtpSent, setIsOtpSent] = useState(false);
 
+
+    // Form validation
     const validateForm = () => {
         const newErrors = {};
         const mobileRegex = /^[9]\d{9}$/;
         const panRegex = /^[A-Z]{5}[0-9]{4}[A-Z]$/;
+
         if (!mobileRegex.test(formData.mobile)) {
             newErrors.mobile = "Enter a valid 10-digit mobile number starting with 9.";
         }
-        
-        if(formData.dob===''){
-            newErrors.dob = "Please Enter Date";
+        if (formData.dob === '') {
+            newErrors.dob = "Please enter your date of birth.";
         }
-
         if (!panRegex.test(formData.pan)) {
-            newErrors.pan = "Enter a valid PAN number";
+            newErrors.pan = "Enter a valid PAN number.";
         }
-
         if (!formData.termsAccepted) {
             newErrors.termsAccepted = "You must accept the terms and conditions.";
         }
@@ -36,42 +39,44 @@ function PersonalLoanProcess() {
         return newErrors;
     };
 
+    // Handle form submission
     const handleSubmit = (e) => {
         e.preventDefault();
         const validationErrors = validateForm();
         setErrors(validationErrors);
-        if (Object.keys(validationErrors).length === 0) {
-            navigate('/loanDetails');
-        }
 
+        if (Object.keys(validationErrors).length === 0) {
+            setIsOtpSent(true);
+            alert(`OTP sent to ${formData.mobile}: ${formData.otp}`);
+            navigate('/loanDetails', { state: { formData } });
+        }
     };
 
     const handleChange = (e) => {
         const { name, value, type, checked } = e.target;
         setErrors((prevErrors) => {
             const newErrors = { ...prevErrors };
-            delete newErrors[name]; 
+            delete newErrors[name];
             return newErrors;
-          });
+        });
+
         setFormData((prevData) => ({
             ...prevData,
             [name]: type === "checkbox" ? checked : value,
         }));
     };
 
-
     return (
-        <div className='personal-container'>
-            <div className='personalProcessContainer-div '>
-                <h4> Discover </h4>
+        <div className="personal-container">
+            <div className="personalProcessContainer-div">
+                <h4>Discover</h4>
                 <h1>the Best Products curated <br />only for you</h1>
-                <h5>in just few steps</h5>
+                <h5>in just a few steps</h5>
             </div>
-            <div className='personalForm-div  '>
+            <div className="personalForm-div">
                 <form onSubmit={handleSubmit}>
-                    <h3>Welcome!<br />
-                        Start your personal loan process </h3>
-                    <div className='form-details'>
+                    <h3>Welcome!<br />Start your personal loan process</h3>
+                    <div className="form-details">
                         <div>
                             <label>Enter Your Registered Mobile Number</label>
                             <input
@@ -83,13 +88,10 @@ function PersonalLoanProcess() {
                                 maxLength={10}
                             />
                             {errors.mobile && <small className="error">{errors.mobile}</small>}
-                            <p className="note">
-                                Note: once the mobile number is entered, an OTP will be sent to the registered
-                                mobile number for verification.
-                            </p>
+                            <p className="note">OTP will be sent to your registered number</p>
                         </div>
 
-                        <div >
+                        <div>
                             <label>Enter Your Date of Birth (as per PAN/Aadhar card)</label>
                             <input
                                 type="date"
@@ -113,7 +115,7 @@ function PersonalLoanProcess() {
                             {errors.pan && <small className="error">{errors.pan}</small>}
                         </div>
 
-                        <div className='checkbox-container'>
+                        <div className="checkbox-container">
                             <input
                                 type="checkbox"
                                 name="termsAccepted"
@@ -124,23 +126,18 @@ function PersonalLoanProcess() {
                                 I hereby accept that my Personal Data may be held and processed by the bank for
                                 availing this loan and relevant services. I Agree to T&C.
                             </label>
-                          
                         </div>
-                        {errors.termsAccepted && (
-                                <small className="error">{errors.termsAccepted}</small>
-                            )}
+                        {errors.termsAccepted && <small className="error">{errors.termsAccepted}</small>}
 
                         <div>
-                            <button type="submit" className="ProceedBtn">Proceed </button>
+                            <button type="submit" className="ProceedBtn">Proceed</button>
                         </div>
+                        {isOtpSent && <p className="success-msg">OTP sent successfully!</p>}
                     </div>
-
-
                 </form>
             </div>
-
         </div>
-    )
+    );
 }
 
-export default PersonalLoanProcess
+export default PersonalLoanProcess;
