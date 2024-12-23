@@ -1,9 +1,10 @@
 import React, { useState, useEffect } from 'react';
 import './LoanDetails.css';
-import { useLocation } from 'react-router-dom';
+import { useLocation,useNavigate} from 'react-router-dom';
 
 function LoanDetails() {
     const location = useLocation();
+    const navigate = useNavigate();
     const data = location.state.formData; 
     console.log("data", data);
     const [formData, setFormData] = useState({
@@ -39,8 +40,8 @@ function LoanDetails() {
         setErrors(validationErrors);
 
         if (Object.keys(validationErrors).length === 0) {
-            setIsOtpVerified(true);
-            alert("Success! OTP verified.");
+          setIsOtpVerified(true);
+          navigate('/mainLoanDetails');
         }
     };
 
@@ -128,10 +129,10 @@ function LoanDetails() {
                         </div>
                         <div>
                             <button type="submit" className="ProceedBtn" disabled={isOtpVerified}>
-                                {isOtpVerified ? "Verified" : "Verify OTP"}
+                                {/* {isOtpVerified ? "Verified" : "Verify OTP"} */}
+                                Proceed
                             </button>
                         </div>
-                        {isOtpVerified && <p className="success-msg">OTP verified successfully!</p>}
                     </div>
                 </form>
             </div>
