@@ -105,9 +105,10 @@ function IncomeDetails() {
               <img src={img} alt="Upload" />
               <div>
                 <p>Drag your document here or</p>
-                <button className='browse-btn' type="button">
+                {/* <button className='browse-btn' type="file">
                   Browse File
-                </button>
+                </button> */}
+                <input type='file'/>
               </div>
             </div>
           </div>
