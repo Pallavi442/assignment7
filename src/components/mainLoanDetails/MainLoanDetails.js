@@ -1,37 +1,24 @@
 import React, { useState } from 'react';
 import './MainLoanDetails.css';
+import { useNavigate } from 'react-router-dom';
+import CommonNav from './CommonNav';
 
 function MainLoanDetails() {
+  const navigate = useNavigate();
   const [amount, setAmount] = useState('');
   const [year, setYear] = useState('');
 
   const isButtonDisabled = !amount || !year;
 
+  const handleSubmit=()=>{
+    navigate('/personalDetails');
+  }
+
+
   return (
     <div className="mainDetails-Container">
-      <div className="mainNavigate-Container">
-        <div className="inline-Container active">
-          <span>1</span>
-          <p>Loan Details</p>
-        </div>
-        <div className="inline-Container">
-          <span>2</span>
-          <p>Personal Details</p>
-        </div>
-        <div className="inline-Container">
-          <span>3</span>
-          <p>Income Details</p>
-        </div>
-        <div className="inline-Container">
-          <span>4</span>
-          <p>Bank Details</p>
-        </div>
-        <div className="inline-Container">
-          <span>5</span>
-          <p>Document Upload</p>
-        </div>
-      </div>
-      <form>
+     <CommonNav activeTab={1}/>
+      <form onSubmit={handleSubmit}>
         <h2>Welcome! <br /> Start your personal loan process</h2>
    
         <div className="loanDetails-Form">

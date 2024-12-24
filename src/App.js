@@ -6,6 +6,8 @@ import PersonalLoan from './components/personalLoan/PersonalLoan';
 import PersonalLoanProcess from './components/personalLoanProcess/PersonalLoanProcess';
 import LoanDetails from './components/loanDetails/LoanDetails';
 import MainLoanDetails from './components/mainLoanDetails/MainLoanDetails';
+import PersonalDetails from './components/mainLoanDetails/PersonalDetails';
+import IncomeDetails from './components/mainLoanDetails/IncomeDetails';
 
 function App() {
   return (
@@ -18,7 +20,9 @@ function App() {
           <Route path="/loan" element={<PersonalLoan />} />
           <Route path="/loanProcess" element={<PersonalLoanProcess/>} />
           <Route path="/loanDetails" element={<LoanDetails/>} />
-          <Route path="/mainLoanDetails" element={<MainLoanDetails/>}/>
+          <Route path="/mainLoanDetails" element={<MainLoanDetails/>}/>  
+          <Route path="/personalDetails" element={<PersonalDetails/>}/>
+          <Route path="/incomeDetails" element={<IncomeDetails/>}/>
         </Routes>
       </div>
     </Router>

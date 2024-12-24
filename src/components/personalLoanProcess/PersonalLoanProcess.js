@@ -17,6 +17,29 @@ function PersonalLoanProcess() {
     const [isOtpSent, setIsOtpSent] = useState(false);
 
 
+    // const sendSms = async (phoneNumber, otp) => {
+    //     try {
+    //       const response = await fetch('https://jsonplaceholder.typicode.com/posts', {
+    //         method: 'POST',
+    //         headers: {
+    //           'Content-Type': 'application/json',
+    //         },
+    //         body: JSON.stringify({ phoneNumber, otp }),
+    //       });
+    
+    //       if (response.ok) {
+    //         console.log('OTP sent successfully');
+
+    //       } else {
+    //         console.error('Failed to send OTP');
+
+    //       }
+    //     } catch (error) {
+    //       console.error('Error sending OTP:', error);
+    //     }
+    //   };
+
+
     // Form validation
     const validateForm = () => {
         const newErrors = {};
@@ -48,6 +71,7 @@ function PersonalLoanProcess() {
         if (Object.keys(validationErrors).length === 0) {
             setIsOtpSent(true);
             alert(`OTP sent to ${formData.mobile}: ${formData.otp}`);
+            // sendSms(formData.mobile,formData.otp)
             navigate('/loanDetails', { state: { formData } });
         }
     };
