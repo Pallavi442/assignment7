@@ -129,7 +129,7 @@ function PersonalDetails() {
                         <input
                             type="tel"
                             name="contactNumber"
-                            placeholder="+91"
+                            // placeholder="+91"
                             value={formData.contactNumber}
                             onChange={handleInputChange}
                         />
@@ -142,7 +142,7 @@ function PersonalDetails() {
                         <input
                             type="tel"
                             name="alternateNumber"
-                            placeholder="+91"
+                            // placeholder="+91"
                             value={formData.alternateNumber}
                             onChange={handleInputChange}
                         />
