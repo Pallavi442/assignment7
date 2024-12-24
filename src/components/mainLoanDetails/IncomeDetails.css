@@ -3,3 +3,65 @@
     padding: 20px 10%;
     color: #333;
 }
+
+.incomeDetails-Container form {
+    max-width: 700px;
+    margin: 0 auto;
+    border: 1px solid #d2d2d2;
+}
+
+.incomeDetails-Container .grp-1 {
+    display: flex;
+    /* gap: 20px; */
+    margin-bottom: 20px;
+    flex-direction: row;
+    flex-wrap: nowrap;
+}
+
+.grp-2 {
+    display: flex;
+    /* flex-direction: column; */
+}
+
+.grp-2 select {
+    border: 1px solid #c9bebe;
+    padding: 10px;
+    margin-top: 5px;
+    border-radius: 5px;
+    width: 30%
+}
+
+.grp-2 label {
+    padding: 10px 0;
+}
+
+.grp-3 {
+    display: flex;
+    flex-direction: column;
+    padding: 20px 0;
+}
+
+.grp-3 label {
+    padding: 10px 0;
+}
+
+.img-container {
+    display: flex;
+    border: 2px dotted grey;
+    padding: 10px;
+    width: 55%;
+    align-items: center;
+}
+
+.browse-btn {
+    border: 1px solid blue;
+    padding: 5px;
+    border-radius: 10px;
+    color: blue;
+}
+
+.btn-group {
+    display: flex;
+    gap: 10px;
+    padding: 20px;
+}
