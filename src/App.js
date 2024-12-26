@@ -8,6 +8,7 @@ import LoanDetails from './components/loanDetails/LoanDetails';
 import MainLoanDetails from './components/mainLoanDetails/MainLoanDetails';
 import PersonalDetails from './components/mainLoanDetails/PersonalDetails';
 import IncomeDetails from './components/mainLoanDetails/IncomeDetails';
+import BankDetails from './components/mainLoanDetails/BankDetails';
 
 function App() {
   return (
@@ -23,6 +24,7 @@ function App() {
           <Route path="/mainLoanDetails" element={<MainLoanDetails/>}/>  
           <Route path="/personalDetails" element={<PersonalDetails/>}/>
           <Route path="/incomeDetails" element={<IncomeDetails/>}/>
+          <Route path="/bankDetails" element={<BankDetails/>}/>
         </Routes>
       </div>
     </Router>

@@ -15,20 +15,30 @@ function IncomeDetails() {
   });
 
   const [errors, setErrors] = useState({});
+  const [uploadedFile, setUploadedFile] = useState(null);
   const [isButtonDisabled, setIsButtonDisabled] = useState(true);
 
   const handleInputChange = (e) => {
     const { name, value } = e.target;
     setFormData({ ...formData, [name]: value });
-    validateForm({ ...formData, [name]: value });
+    validateForm({ ...formData, [name]: value }, uploadedFile);
   };
 
-  const validateForm = (data) => {
+  const handleFileChange = (e) => {
+    console.log("selected file",e.target.files)
+    const file = e.target.files[0];
+    setUploadedFile(file);
+    validateForm(formData, file);
+  };
+
+  const validateForm = (data, file) => {
     const newErrors = {};
     if (!data.incomeType) newErrors.incomeType = 'Income Type is required';
     if (!data.yearsOfExperience) newErrors.yearsOfExperience = 'Years of Experience is required';
     if (!data.annualIncome || isNaN(data.annualIncome)) newErrors.annualIncome = 'Valid Annual Income is required';
     if (!data.occupation) newErrors.occupation = 'Occupation is required';
+    if (!file) newErrors.uploadedFile = 'Payslip file is required';
+
     setErrors(newErrors);
     setIsButtonDisabled(Object.keys(newErrors).length > 0);
   };
@@ -36,7 +46,7 @@ function IncomeDetails() {
   const handleSubmit = (e) => {
     e.preventDefault();
     if (isButtonDisabled) return;
- 
+    navigate('/bankDetails');
   };
 
   return (
@@ -105,10 +115,16 @@ function IncomeDetails() {
               <img src={img} alt="Upload" />
               <div>
                 <p>Drag your document here or</p>
-                {/* <button className='browse-btn' type="file">
+                <label className="file-upload">
                   Browse File
-                </button> */}
-                <input type='file'/>
+                  <input
+                    type="file"
+                    name="image_uploads"
+                    accept="image/*"
+                    onChange={handleFileChange}
+                  />
+                </label>
+                {errors.uploadedFile && <small>{errors.uploadedFile}</small>}
               </div>
             </div>
           </div>

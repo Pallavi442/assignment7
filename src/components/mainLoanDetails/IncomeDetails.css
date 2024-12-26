@@ -65,3 +65,29 @@
     gap: 10px;
     padding: 20px;
 }
+.img-container input[type='file']{
+    border: 1px solid blue;
+    color: blue;
+    width: 95px;
+    border-radius: 20px;
+    padding: 4px;
+    /* content: ('Browse file'); */
+}  
+  .file-upload {
+    display: inline-block;
+    border: 1px solid blue;
+    color: blue;
+    width: 100px;
+    text-align: center;
+    border-radius: 20px;
+    padding: 6px;
+    background-color: white;
+    font-size: 14px;
+  }
+  
+  .img-container input[type='file'] {
+    position: absolute;
+    opacity: 0;
+    z-index: 1;
+  }
+  
