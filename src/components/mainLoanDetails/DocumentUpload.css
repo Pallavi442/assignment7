@@ -16,7 +16,7 @@
 .doc-main {
     padding: 0 30px;
     display: flex;
-    flex-wrap: wrap; 
+    flex-wrap: wrap;
     gap: 20px;
 }
 
@@ -32,16 +32,14 @@
 }
 
 .doc-main button {
-    padding: 8px 15px;
+    display: flex;
+    padding: 11px;
     background: rgba(228, 236, 253, 1);
     color: rgba(64, 123, 255, 1);
     border: none;
     border-radius: 4px;
 }
 
-.doc-main button:hover {
-    background-color: #0056b3;
-}
 
 .checkContainer {
     display: flex;
@@ -56,4 +54,10 @@
 
 .checkContainer p {
     font-size: 14px;
+}
+
+.doc-innerDiv {
+    display: flex;
+    flex-wrap: nowrap;
+    flex-direction: row;
 }

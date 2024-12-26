@@ -51,7 +51,7 @@ function DocumentUpload() {
                 <div className='doc-main'>
                     <div>
                         <label>Pan Card</label>
-                        <div>
+                        <div className='doc-innerDiv'>
                             <input
                                 type='file'
                                 onChange={(e) => handleFileChange(e, 'panCard')}
@@ -61,7 +61,7 @@ function DocumentUpload() {
                     </div>
                     <div>
                         <label>Aadhar Card</label>
-                        <div>
+                        <div className='doc-innerDiv'>
                             <input
                                 type='file'
                                 onChange={(e) => handleFileChange(e, 'aadharCard')}
@@ -71,7 +71,7 @@ function DocumentUpload() {
                     </div>
                     <div>
                         <label>Photo</label>
-                        <div>
+                        <div className='doc-innerDiv'>
                             <input
                                 type='file'
                                 onChange={(e) => handleFileChange(e, 'photo')}
@@ -81,7 +81,7 @@ function DocumentUpload() {
                     </div>
                     <div>
                         <label>Cheque</label>
-                        <div>
+                        <div className='doc-innerDiv'>
                             <input
                                 type='file'
                                 onChange={(e) => handleFileChange(e, 'cheque')}
@@ -91,7 +91,7 @@ function DocumentUpload() {
                     </div>
                     <div>
                         <label>Signature</label>
-                        <div>
+                        <div className='doc-innerDiv'>
                             <input
                                 type='file'
                                 onChange={(e) => handleFileChange(e, 'signature')}
@@ -101,7 +101,7 @@ function DocumentUpload() {
                     </div>
                     <div>
                         <label>Guarantor Signature</label>
-                        <div>
+                        <div className='doc-innerDiv'>
                             <input
                                 type='file'
                                 onChange={(e) => handleFileChange(e, 'guarantorSignature')}
