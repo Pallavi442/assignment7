@@ -9,6 +9,7 @@ import MainLoanDetails from './components/mainLoanDetails/MainLoanDetails';
 import PersonalDetails from './components/mainLoanDetails/PersonalDetails';
 import IncomeDetails from './components/mainLoanDetails/IncomeDetails';
 import BankDetails from './components/mainLoanDetails/BankDetails';
+import DocumentUpload from './components/mainLoanDetails/DocumentUpload';
 
 function App() {
   return (
@@ -25,6 +26,8 @@ function App() {
           <Route path="/personalDetails" element={<PersonalDetails/>}/>
           <Route path="/incomeDetails" element={<IncomeDetails/>}/>
           <Route path="/bankDetails" element={<BankDetails/>}/>
+          <Route path="/docUpload" element={<DocumentUpload/>}/>
+          
         </Routes>
       </div>
     </Router>

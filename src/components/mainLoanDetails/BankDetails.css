@@ -1,5 +1,66 @@
-.bank-details{
+.bank-details {
     background-color: #fff;
     padding: 20px 10%;
     color: #333;
+}
+.bank-details form{
+    max-width: 900px;
+    margin: 0 auto;
+    border: 1px solid #d2d2d2;
+}
+.bank-details h3{
+    padding:20px 20px
+}
+.bank-grp{
+    padding: 20px 20px;
+}
+.grpMain-1 {
+    display: flex;
+    padding:10px 0px;
+    /* flex-wrap: nowrap; */
+    gap: 20px;
+    width: 100%
+    /* margin-bottom: 30px; */
+
+}
+.grpMain-1 label{
+    padding:10px 0px;
+}
+
+.grpMain-2 {
+    display: flex;
+    padding:10px 0px;
+    gap: 25px;
+    width: 100%
+}
+.grpMain-2 label{
+    padding:10px 0px;
+}
+
+.subDiv-1 {
+    display: flex;
+    width: 30%;
+    flex-direction: column;
+}
+.subDiv-1 input{
+    border: 1px solid #c9bebe;
+    padding: 10px;
+    margin-top: 5px;
+    border-radius: 5px;
+}
+
+.subDiv-1  select,.subDiv-2  select{
+    border: 1px solid #c9bebe;
+    padding: 10px;
+    margin-top: 5px;
+    border-radius: 5px;
+}
+
+.subDiv-2 {
+    display: flex;
+    width: 30%;
+    flex-direction: column;
+}
+#btn-class{
+    padding-left: 3px;
 }

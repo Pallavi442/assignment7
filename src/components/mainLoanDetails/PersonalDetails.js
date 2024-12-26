@@ -149,7 +149,7 @@ function PersonalDetails() {
                     </div>
                 </div>
                 <div className='grp-1'>
-                    <div>
+                    <div style={{width:'90%'}}>
                         <label>Current Address</label>
                         <input
                             type="text"
@@ -247,7 +247,7 @@ function PersonalDetails() {
                     </div>
                 </div>
                 <div className='grp-1'>
-                    <div>
+                    <div style={{width:'90%'}}>
                         <label>Current Address</label>
                         <input
                             type="text"
@@ -261,7 +261,7 @@ function PersonalDetails() {
                         )}
                     </div>
                 </div>
-                <div className='btn-group'>
+                <div className='btn-group' id='btn-class'>
                     <button type="button" onClick={() =>navigate('/mainLoanDetails')}>
                         Go Back
                     </button>
