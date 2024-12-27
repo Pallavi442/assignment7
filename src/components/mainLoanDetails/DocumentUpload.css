@@ -18,18 +18,20 @@
     display: flex;
     flex-wrap: wrap;
     gap: 20px;
+    flex-direction: column;
+}
+
+.doc-upload-div {
+    display: flex;
+    flex-direction: row;
+    gap: 50px;
 }
 
 .doc-main label {
     display: block;
-    font-weight: bold;
     margin-bottom: 8px;
 }
 
-.doc-main input[type='file'] {
-    width: calc(100% - 80px);
-    margin-right: 10px;
-}
 
 .doc-main button {
     display: flex;
@@ -38,6 +40,7 @@
     color: rgba(64, 123, 255, 1);
     border: none;
     border-radius: 4px;
+    cursor: pointer;
 }
 
 
@@ -49,7 +52,7 @@
 
 .checkContainer input {
     margin-right: 10px;
-    margin-top: 5px;
+    margin-top: 20px;
 }
 
 .checkContainer p {
@@ -58,6 +61,64 @@
 
 .doc-innerDiv {
     display: flex;
-    flex-wrap: nowrap;
     flex-direction: row;
+    /* gap: 50px; */
+    justify-content: space-between;
+}
+
+.doc-upload-inner {
+    width: 50%
+}
+
+.file-upload-doc {
+    display: inline-block;
+    border: 1px solid #a4a4a4;
+    /* color: blue; */
+    width: 70%;
+    text-align: center;
+    border-radius: 4px;
+    padding: 6px;
+    background-color: white;
+    font-size: 14px;
+    text-align: left;
+    background: linear-gradient(90deg, rgb(222, 221, 221) 35%, rgba(103, 103, 103, 1) 35%, rgba(255, 255, 255, 1) 36%);
+}
+
+.file-upload-doc  span {
+    padding-left: 40px;
+}
+
+.doc-innerDiv input[type='file'] {
+    position: absolute;
+    opacity: 0;
+    z-index: 1;
+}
+
+.successOverlay {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.8);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    z-index: 1000;
+}
+
+.successMessage {
+    background-color: white;
+    border-radius: 8px;
+    padding: 20px;
+    text-align: center;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.5);
+    display: flex;
+    gap: 20px;
+}
+
+.successMessage img {
+    width: 50px;
+    height: 50px;
+    margin-bottom: 10px;
 }

@@ -48,6 +48,9 @@ function IncomeDetails() {
     if (isButtonDisabled) return;
     navigate('/bankDetails');
   };
+  const renderFileName = (file) => {
+    return file ? file.name : "";
+  };
 
   return (
     <div className='incomeDetails-Container'>
@@ -124,6 +127,7 @@ function IncomeDetails() {
                     onChange={handleFileChange}
                   />
                 </label>
+                <span>{renderFileName(uploadedFile)}</span>
                 {errors.uploadedFile && <small>{errors.uploadedFile}</small>}
               </div>
             </div>
